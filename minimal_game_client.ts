@@ -41,7 +41,7 @@ class MinimalGameClient {
         this.client = new GameClient();
 
         this.client.on('open', () => this.mixerClientOpened());
-        this.client.on('error', e => console.error('interactive error: ', e));
+        this.client.on('error', (e) => this.gameClientError(e));
 
         this.client
             .open(authToken)
@@ -50,7 +50,6 @@ class MinimalGameClient {
 
     private mixerClientOpened() {
         console.log('Mixer client opened');
-        this.client.on('error', (e) => this.gameClientError(e));
         this.client.on('message', (err: any) => console.log('<<<', err));
         this.client.on('send', (err: any) => console.log('>>>', err));
 
@@ -76,7 +75,7 @@ class MinimalGameClient {
     }
 
     private gameClientError(error: any) {
-        console.error('Gameclient error: ', error);
+        console.error('interactive error: ', error);
     }
 }
 
