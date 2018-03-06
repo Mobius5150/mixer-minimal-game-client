@@ -1,6 +1,8 @@
 # Mixer Minimal Game client
 A minimal game client that connects to interactive and sends a scenes json array. Also does shortcode auth.
 
+If you're looking for a version that runs in your browser, see [Mobius5150/mixer-minimal-game-client-web](https://github.com/Mobius5150/mixer-minimal-game-client-web).
+
 ## Getting Started
 First, add the information for your Mixer application and interactive project to `mixerauth.json`.
 
